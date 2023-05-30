@@ -1,0 +1,15 @@
+<form [formGroup]="profileForm">
+    <mat-form-field>
+        <mat-label for="firstName"><span>Name</span></mat-label>
+        <input matInput id="firstName" type="text" formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label for="lastName"><span>Last Name</span></mat-label>
+        <input matInput id="lastName" type="text" formControlName="lastName">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Save</button>
+
+    <section>
+        {{profileForm.getRawValue() | json}}
+    </section>
+</form>
